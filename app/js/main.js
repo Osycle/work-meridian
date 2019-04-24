@@ -46,51 +46,58 @@
 				'<svg viewBox="0 0 100 100"><path d="M 10,50 L 70,100 L 70,90 L 70,50  L 70,10 L 70,0 Z" class="arrow"></path></svg>'+
 			'</span>'
 		]
-		$(".short-services-items.owl-carousel").owlCarousel({
+		$(".staff-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
-			dots: false,
+			dots: true,
 			dotsEach: true,
 			autoplay: true,
 			touchDrag: false,
 			responsive:{
 				0:{items:1},
-				991:{items:2},
-				1600:{items:3}
+				991:{items:4}
 			},
 			navText : owlBtn,
 			margin: 15
 		});
-		$(".partners-items.owl-carousel").owlCarousel({
-			nav: false,
-			dots: true,
+		$(".certifications-items.owl-carousel").owlCarousel({
+			nav: true,
 			//items: 3,
+			dots: true,
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: false,
+			responsive:{
+				0:{items:1},
+				991:{items:3}
+			},
+			navText : owlBtn,
+			margin: 15
+		});
+
+		$(".short-partners-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: true,
 			dotsEach: true,
 			autoplay: true,
 			touchDrag: false,
 			responsive:{
 				0:{items:3},
-				991:{items:3},
-				1600:{items:5}
+				991:{items:4}
 			},
 			navText : owlBtn,
 			margin: 0
 		});
-		$(".tariffs-items.owl-carousel").owlCarousel({
-			nav: true,
-			dots: !checkSm(),
-			//items: 3,
-			dotsEach: true,
-			autoplay: true,
-			touchDrag: false,
-			responsive:{
-				0:{items:1},
-				991:{items:2},
-				1600:{items:3}
-			},
-			navText : owlBtn,
-			margin: 30
-		});
+
+		if( $(".owl-nav-style-1").length > 0 ){
+			$(".owl-nav-style-1").map(function( i, el ){
+				$(el).find(".owl-prev").after($(el).find(".owl-dots"));
+			})
+			
+		}
+		
+
 
 
 		/*FANCYBOX*/
@@ -198,8 +205,8 @@
 			$(bnrCarousel).find(".flickity-prev-next-button.previous").after($(bnrCarousel).find(".flickity-page-dots"));
 
 		}
-	
 
+		//reviews-carousel
 		$(".reviews-carousel .carousel-items").flickity({
 			imagesLoaded: true,
 			autoPlay: 3300,

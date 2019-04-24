@@ -521,8 +521,14 @@ div.owl-nav{
 	padding-bottom: 30px;
 	margin-left: -5px;
 	margin-right: -5px;
-	@extend .carousel-dots;
 	position: relative;
+	@extend .carousel-dots;
+	.owl-dot{
+		background-color: rgba($color-1, 0.5);
+		&.active{
+			background-color: $color-1;
+		}
+	}
 }
 .owl-prev{
 	margin-right: 5px;
@@ -530,15 +536,21 @@ div.owl-nav{
 .owl-nav{
 	text-align: right;
 }
-.dots-style-1{
-	.owl-dots{
-		.owl-dot{
-			margin: 0 12px;
-			border: 1px solid $color-1;
+.owl-nav-style-1{
+	.owl-nav{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		.owl-prev{
+			margin-right: 0;
+		}
+		.owl-dots{
+			padding: 5px 15px;
 		}
 	}
 }
-
 .dots-center{
 	.owl-dots{
 		text-align: center;
@@ -562,11 +574,11 @@ div.owl-nav{
 	.owl-next{
 		.owl-btn{
 			right: 0;
+			transform: rotate(180deg);
 		}
 	}
 	@media (min-width: 992px) {
-		top: 50%;
-		transform: translateY(-100%);
+
 	}
 	@media (max-width: 991px) {
 		position: relative;
@@ -609,10 +621,18 @@ div.owl-nav{
 	}
 }
 .owl-btn-2{
-	@extend .owl-btn;
-	border: 1px solid rgba($color-1, 0.5);
-	.arrow{
-		fill: $color-1;
+	.owl-btn{
+		@extend .owl-btn;
+		border: 1px solid rgba($color-1, 0.5);
+		.arrow{
+			fill: $color-1;
+		}
+		&:hover{
+			background-color: $color-1;
+			.arrow{
+				fill: white;
+			}
+		}
 	}
 }
 .owl-btn-1{
