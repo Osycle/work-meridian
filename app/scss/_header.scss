@@ -87,8 +87,10 @@ $header-min-menu: 70px;
 		transform-origin: 50% 0;
 	}
 
-
-	.header-top, .header-top-content, .header-logo img, .header-logo{
+	.search-nav-content{
+		z-index: -1;
+	}
+	.header-top, .header-top-content, .header-logo img, .header-logo, .search-nav-content{
 		transition: all 0.5s ease; 	
 	}
 	&.scrolled, &.header-pages{
@@ -102,6 +104,9 @@ $header-min-menu: 70px;
 		}
 		.header-lang{
 			display: none;
+		}
+		.search-nav-content{
+			top: -150px;
 		}
 		.header-logo{
 			height: 100px;
@@ -558,19 +563,25 @@ textarea.form-control{
 
 //search nav
 .search-nav-content, .input-btnin{
-	position: relative;
+	position: absolute;
+	right: 0;
+	top: 130px;
 	.fa{
 		color: $color-gray-2;
 		transform: scale(0.8);
 		font-size: 20px;
 	}
 	.search-input-content{
-		width: 50px;
-		border: 1px solid $color-gray-1;
+		padding: 0 15px;
 		height: 50px;
 		margin-left: auto;
+		background-color: $color-1;
 		position: relative;
-		border: 1px solid #d1d1d1;
+		border: none;
+		.fa{
+			margin-top: -2px;
+			margin-right: 10px;
+		}
 	}
 	#search_status{
 		&:checked{
@@ -591,8 +602,9 @@ textarea.form-control{
 	.input-box{
     display: none;
     position: absolute;
-    right: 50px;
+    right: 110%;
     height: 50px;
+    overflow: hidden;
     top: 50%;
     transform: translate(0, -50%);
 	}

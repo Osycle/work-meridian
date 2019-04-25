@@ -342,8 +342,20 @@
 
 
 
+		if($(".traderoutes-map path").length > 0){
+			var containerCountry = $("[data-container-country]") || null;
+			if(!containerCountry)
+				return;
+			$(".traderoutes-map path").on("mouseenter", function(){
+				var itemNum = $(this).attr("data-country");
+				containerCountry.map(function(i, el){
+					$(el).find(".item").removeClass("is-selected");
+					$(el).find(".item").eq(itemNum-1).addClass("is-selected");
+				})
+				console.log(itemNum);
+			});
 
-
+		}
 
 
 
