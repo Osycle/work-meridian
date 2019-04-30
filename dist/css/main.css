@@ -8568,6 +8568,7 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 1;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -10119,12 +10120,31 @@ figcaption {
     .outlets-items .outlets-map {
       width: 100%;
       height: 180px; } }
+  .outlets-items .outlets-map a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.outlets-items .map-img {
+  height: 100%;
+  background-position: center; }
 
 .outlets-items .map-container {
+  display: none;
   height: 100%;
   width: 100%; }
   .outlets-items .map-container p {
     font-size: 1.5em; }
+
+.outlets-current-map {
+  height: 80%;
+  width: 80%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  margin: 0; }
 
 /* 
 		_footer.scss

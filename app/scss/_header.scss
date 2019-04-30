@@ -75,6 +75,7 @@ $header-min-menu: 70px;
   height: 142px;
   display: flex;
   align-items: center;
+  z-index: 1;
   justify-content: center;
 	img{
 		display: inline-block;
