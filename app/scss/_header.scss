@@ -211,12 +211,20 @@ $header-min-menu: 70px;
 		@extend .letter-none;
 		& > li{
 			height: 100%;
+			text-align: center;
+			width: 100%;
 			display: inline-block;
 			position: relative;
 			letter-spacing: 0;
+			&:nth-child(1), &:nth-child(2), &:nth-child(3){
+				a{
+					width: 139px;
+				}
+			}
 			&:nth-child(3){
 				margin-right: 305px;
 			}
+
 			&:nth-child(1){
 				a{
 					padding-left: 0;
@@ -231,6 +239,7 @@ $header-min-menu: 70px;
 			& > a{
 				height: 100%;
 				display: block;
+				justify-content: center;
 				padding: 10px 10px;
 				position: relative;
 				display: flex;

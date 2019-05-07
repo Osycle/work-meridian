@@ -871,7 +871,7 @@ figcaption{
 	.img{
 		background-position: center;
 		height: 380px;
-		background-size: contain;
+		background-size: 80%;
 		@extend .shadow-def;
 		@media (max-width: 991px) {
 			height: 200px;

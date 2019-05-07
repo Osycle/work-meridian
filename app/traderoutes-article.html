@@ -620,7 +620,7 @@
 										</div>
 										<div class="outlets-map">
 											<a href="javascript:;" data-src="#map-canvas-1" data-fancybox><div class="map-img" style="background-image: url('img/other/map-img.jpg');"></div></a>
-											<div id="map-canvas-1" class="outlets-current-map map-container col-xs-12"></div>
+											<div id="map-canvas-1" data-lat="41.34765" data-lng="69.354354343" class="outlets-current-map map-container col-xs-12"></div>
 										</div>
 									</div>
 								</div>
@@ -645,7 +645,7 @@
 										</div>
 										<div class="outlets-map">
 											<a href="javascript:;" data-src="#map-canvas-2" data-fancybox><div class="map-img" style="background-image: url('img/other/map-img.jpg');"></div></a>
-											<div id="map-canvas-2" class="outlets-current-map map-container col-xs-12"></div>
+											<div id="map-canvas-2" data-lat="41.44765" data-lng="69.454354343" class="outlets-current-map map-container col-xs-12"></div>
 										</div>
 									</div>
 								</div>
@@ -816,41 +816,7 @@
 	<script src="js/main.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"></script>
   <script type="text/javascript">
-  	var outletsLatLng = [
-	  	{
-				lat: "41.34765",
-				lng: "69.354354343"
-	  	},
-	  	{
-				lat: "41.6476",
-				lng: "69.6543"
-	  	},
-	  	{
-				lat: "41.34765",
-				lng: "69.354354343"
-	  	},
-	  	{
-				lat: "41.9476",
-				lng: "69.9543"
-	  	},
-	  	{
-				lat: "42.24765",
-				lng: "70.254354343"
-	  	},
-	  	{
-				lat: "42.5476",
-				lng: "70.5543"
-	  	},
-	  	{
-				lat: "42.84765",
-				lng: "70.854354343"
-	  	},
-	  	{
-				lat: "43.1476",
-				lng: "71.1543"
-	  	}
 
-  	];
       var icon = {
         path: 'M16.5,51s-16.5-25.119-16.5-34.327c0-9.2082,7.3873-16.673,16.5-16.673,9.113,0,16.5,7.4648,16.5,16.673,0,9.208-16.5,34.327-16.5,34.327zm0-27.462c3.7523,0,6.7941-3.0737,6.7941-6.8654,0-3.7916-3.0418-6.8654-6.7941-6.8654s-6.7941,3.0737-6.7941,6.8654c0,3.7916,3.0418,6.8654,6.7941,6.8654z',
         anchor: new google.maps.Point(16.5, 51),
@@ -863,7 +829,9 @@
 	    function initialize(LatLngItems) {
 	    	for (var i = 0; i < LatLngItems.length; i++) {
 		    	var map;
-		    	console.log(([i]+1));
+		    	var lat = LatLngItems.eq(i).attr("data-lat");
+		    	var lng = LatLngItems.eq(i).attr("data-lng");
+		    	console.log(lng);
 		      var mapOptions = {
 		        mapTypeId: google.maps.MapTypeId.ROADMAP,
 		        mapTypeControl: false,
@@ -880,7 +848,7 @@
 		        streetViewControl: false,
 		        scaleControl: false,
 		        overviewMapControl: false,
-		        center: new google.maps.LatLng(LatLngItems[i].lat, LatLngItems[i].lng)
+		        center: new google.maps.LatLng(lat, lng)
 		      };
 		      mapContainer = document.getElementById('map-canvas-'+ ([i]*1+1) ) || null;
 		      if( !mapContainer )
@@ -892,14 +860,14 @@
 		        disableDefaultUI: true
 		      });
 		      var marker = new google.maps.Marker({
-		        position: new google.maps.LatLng(LatLngItems[i].lat, LatLngItems[i].lng),
+		        position: new google.maps.LatLng(lat, lng),
 		        map: map,
 		        icon: icon,
 		        title: 'marker'
 		      });
 	    	}
 	    }
-	    initialize(outletsLatLng);
+	    initialize( $(".outlets-current-map") );
 	    google.maps.event.addDomListener(window, 'load', initialize);
 
 
