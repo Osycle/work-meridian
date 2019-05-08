@@ -9786,8 +9786,8 @@ figcaption {
 .certifications-items .img {
   height: 375px;
   background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover; }
+  -webkit-background-size: contain;
+  background-size: contain; }
 
 @media (max-width: 991px) {
   .certifications-items .owl-btn, .certifications-items .flickity-btn-1 .flickity-prev-next-button, .flickity-btn-1 .certifications-items .flickity-prev-next-button {

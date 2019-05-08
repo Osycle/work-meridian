@@ -792,7 +792,7 @@ figcaption{
 	.img{
 		height: 375px;
 		background-position: center;
-		background-size: cover;
+		background-size: contain;
 	}
 	.owl-nav{
 		@extend .filter-white;
