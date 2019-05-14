@@ -9227,6 +9227,12 @@ figcaption {
 .bnr-slider {
   position: relative;
   overflow: hidden; }
+  .bnr-slider.bnr-article .bnr-carousel figure {
+    height: 430px; }
+  .bnr-slider.bnr-article .bnr-carousel .carousel-content .align-i-center {
+    height: 430px; }
+    .bnr-slider.bnr-article .bnr-carousel .carousel-content .align-i-center .btn-content .btn-def {
+      display: none; }
 
 .bnr-carousel {
   background-color: white;

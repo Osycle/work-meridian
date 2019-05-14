@@ -119,27 +119,25 @@ figcaption{
 .bnr-slider{
 	position: relative;
 	overflow: hidden;
-	// &.bnr-article{
-	// 	.bnr-carousel{
-	// 		figure{
-	// 			height: 430px;
-	// 		}
-	// 		.carousel-content{
-	// 			.align-i-center{
-	// 				.btn-content{
-	// 					display: none;
-	// 				}
-	// 				.box-md-7{
-	// 					width: 90%;
-	// 					p{
-	// 						display: none;
-	// 					}
-	// 				}
-	// 				height: 430px;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	&.bnr-article{
+
+		.bnr-carousel{
+			figure{
+				height: 430px;
+			}
+			.carousel-content{
+				.align-i-center{
+					.btn-content{
+						.btn-def{
+							display: none;
+						}
+					}
+					height: 430px;
+				}
+			}
+		}
+
+	}
 }
 
 
