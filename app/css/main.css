@@ -7579,7 +7579,7 @@ table {
 .img {
   background-repeat: no-repeat; }
 
-.shadow-def, .short-about-content, .staff-items figure:hover .wrapper, .partners .short-partners-items figure .img-content:hover, .partners-article-img .img, .traderoutes-items .item, .outlets-items .outlets-info {
+.shadow-def, .short-about-content, .staff-items figure:hover .wrapper, .partners .short-partners-items figure .img-content:hover, .partners-article-img .img-content, .traderoutes-items .item, .outlets-items .outlets-info {
   -webkit-box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.2); }
 
@@ -9577,6 +9577,9 @@ figcaption {
       -ms-flex-pack: center;
       justify-content: center; } }
 
+.short-advantages {
+  background-position: 35% center; }
+
 .short-advantages-items {
   font-size: 0.88em; }
   .short-advantages-items figure .entry-header {
@@ -9847,13 +9850,13 @@ figcaption {
     justify-content: flex-end; } }
 
 .partners-article-img .img-content {
-  padding: 10px; }
+  padding: 30px; }
 
 .partners-article-img .img {
   background-position: center;
   height: 380px;
-  -webkit-background-size: 80% 80%;
-  background-size: 80%; }
+  -webkit-background-size: contain;
+  background-size: contain; }
   @media (max-width: 991px) {
     .partners-article-img .img {
       height: 200px; } }

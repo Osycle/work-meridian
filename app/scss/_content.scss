@@ -563,7 +563,7 @@ figcaption{
 
 //short-advantages
 .short-advantages{
-	
+	background-position: 35% center;
 }
 .short-advantages-items{
 	font-size: 0.88em;
@@ -866,13 +866,13 @@ figcaption{
 //partners-article
 .partners-article-img{
 	.img-content{
-		padding: 10px;
+		padding: 30px;
+		@extend .shadow-def;
 	}
 	.img{
 		background-position: center;
 		height: 380px;
-		background-size: 80%;
-		@extend .shadow-def;
+		background-size: contain;
 		@media (max-width: 991px) {
 			height: 200px;
 		}
