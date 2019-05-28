@@ -10125,11 +10125,16 @@ figcaption {
   align-items: center;
   background-color: white;
   text-align: center; }
+  .outlets-items .outlets-info > div {
+    width: 100%; }
   @media (max-width: 991px) {
     .outlets-items .outlets-info {
       margin: 15px 0;
       -webkit-box-shadow: none;
       box-shadow: none; } }
+  @media (min-width: 991px) {
+    .outlets-items .outlets-info {
+      width: 300px; } }
 
 .outlets-items .outlets-map {
   width: 180px; }

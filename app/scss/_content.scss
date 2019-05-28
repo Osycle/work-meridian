@@ -1178,9 +1178,15 @@ figcaption{
 		align-items: center;
 		background-color: white;
 		text-align: center;
+		&>div{
+			width: 100%;
+		}
 		@media (max-width: 991px) {
 			margin: 15px 0;
 			box-shadow: none;
+		}
+		@media (min-width: 991px) {
+			width: 300px;
 		}
 	}
 	.outlets-map{
