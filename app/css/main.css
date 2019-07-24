@@ -9505,9 +9505,6 @@ figcaption {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .short-partners-items figure:not(:hover) {
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1); }
 
 .short-partners-items .img-content {
   border: 1px solid #ededed;
@@ -9831,14 +9828,10 @@ figcaption {
   -webkit-filter: grayscale(0);
   filter: grayscale(0); }
 
-.partners .short-partners-items figure .img-content {
-  opacity: 0.5;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  .partners .short-partners-items figure .img-content:hover {
-    opacity: 1;
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0); }
+.partners .short-partners-items figure .img-content:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0); }
 
 .partners .short-partners-items .img {
   height: 155px; }

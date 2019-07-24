@@ -476,7 +476,7 @@ figcaption{
 	figure{
 		transition: all 0.3s ease;
 		&:not(:hover){
-			filter: grayscale(1);
+			//filter: grayscale(1);
 		}
 	}
 	.img-content{
@@ -834,8 +834,8 @@ figcaption{
 				filter: grayscale(0);
 			}
 			.img-content{
-				opacity: 0.5;
-				filter: grayscale(1);
+				//opacity: 0.5;
+				//filter: grayscale(1);
 				&:hover{
 					opacity: 1;
 					@extend .shadow-def;
